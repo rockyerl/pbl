@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palet diambil dari logo: navy #033c5a, merah #d00212 */
-  --color-ink: #033c5a;
-  --color-sea: #0b5880;
-  --color-fog: #eef2f5;
-  --color-line: #d2dce3;
-  --color-container: #d00212;
-  --font-display: var(--font-display-next), system-ui, sans-serif;
-  --font-sans: var(--font-body-next), system-ui, sans-serif;
+    /* Palet diambil dari logo: navy #033c5a, merah #d00212 */
+    --color-ink: #033c5a;
+    --color-sea: #0b5880;
+    --color-fog: #eef2f5;
+    --color-line: #d2dce3;
+    --color-container: #d00212;
+    --font-display: var(--font-display-next), system-ui, sans-serif;
+    --font-sans: var(--font-body-next), system-ui, sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body { background: var(--color-fog); color: var(--color-ink); }
 :focus-visible { outline: 2px solid var(--color-container); outline-offset: 3px; }
 

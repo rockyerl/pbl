@@ -43,9 +43,9 @@ export function PageHero({ title, children, icon: Icon }: { title: string; child
     return (
         <section className="navy-bg grid-lines slant-b relative overflow-hidden text-white">
             <Shapes />
-            <div className="relative mx-auto max-w-6xl px-6 pb-32 pt-16 md:pt-24">
-                {Icon && <span className="mb-6 flex h-14 w-14 items-center justify-center bg-container"><Icon size={28} aria-hidden /></span>}
-                <h1 className="max-w-[20ch] font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">{title}</h1>
+            <div className="relative mx-auto max-w-6xl px-6 pb-28 pt-6 sm:pb-32 sm:pt-8 md:pt-10">
+                {Icon && <span className="mb-5 flex h-12 w-12 sm:mb-6 sm:h-14 sm:w-14 items-center justify-center bg-container"><Icon size={28} aria-hidden /></span>}
+                <h1 className="max-w-[20ch] font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">{title}</h1>
                 {children && <p className="mt-6 max-w-[58ch] text-lg text-white/75">{children}</p>}
             </div>
         </section>
@@ -56,8 +56,8 @@ export function Section({ title, children, tone = "white" }: { title?: string; c
     const bg = tone === "white" ? "dots bg-white border-y border-line" : tone === "ink" ? "navy-bg grid-lines text-white" : "";
     return (
         <section className={bg}>
-            <div className="mx-auto max-w-6xl px-6 py-20">
-                {title && <h2 className="mb-10 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>}
+            <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+                {title && <h2 className="mb-8 sm:mb-10 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2>}
                 {children}
             </div>
         </section>
@@ -102,13 +102,14 @@ export function WhyGrid() {
 
 export function CtaBand() {
     return (
-        <section className="px-6 py-20">
-            <div className="navy-bg grid-lines relative mx-auto max-w-6xl overflow-hidden rounded-3xl px-8 py-16 text-white md:px-14">
+        <section className="px-4 py-12 sm:px-6 sm:py-20">
+            <div className="navy-bg grid-lines relative mx-auto max-w-6xl overflow-hidden rounded-3xl px-6 py-12 text-white sm:px-8 sm:py-16 md:px-14">
                 <Shapes />
                 <h2 className="relative max-w-[18ch] font-display text-3xl font-semibold tracking-tight sm:text-5xl">Tell us what needs to move.</h2>
                 <div className="relative mt-8 flex flex-wrap items-center gap-6">
                     <Link href="/contact" className="-skew-x-[12deg] bg-container px-7 py-3 font-semibold hover:brightness-110"><span className="block skew-x-[12deg]">Request a quote</span></Link>
                     <a href="tel:0215524626" className="font-medium underline-offset-4 hover:underline">(021) 552 4626</a>
+                    <a href={`mailto:${company.email}`} className="font-medium underline-offset-4 hover:underline">{company.email}</a>
                 </div>
             </div>
         </section>

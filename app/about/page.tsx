@@ -24,7 +24,7 @@ export default function About() {
 
             {/* Company profile video */}
             <section className="bg-fog">
-                <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.35fr_1fr]">
+                <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 sm:py-20 lg:grid-cols-[1.35fr_1fr] lg:gap-12">
                     <div className="relative">
                         <div aria-hidden className="absolute -left-4 -top-4 hidden h-full w-full -skew-x-[6deg] border-2 border-container/70 lg:block" />
                         <div className="relative">
@@ -52,13 +52,13 @@ export default function About() {
 
             {/* Vision & mission */}
             <section className="dots border-y border-line bg-white">
-                <div className="mx-auto max-w-6xl px-6 py-20">
+                <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
                     <div className="grid gap-8 md:grid-cols-2">
                         {[
                             { icon: Eye, title: "Vision", text: vision },
                             { icon: Target, title: "Mission", text: mission },
                         ].map(({ icon: Icon, title, text }) => (
-                            <article key={title} className="rounded-2xl border border-line border-t-4 border-t-container bg-white p-8 shadow-sm">
+                            <article key={title} className="rounded-2xl border border-line border-t-4 border-t-container bg-white p-6 shadow-sm sm:p-8">
                                 <span className="flex h-14 w-14 items-center justify-center bg-ink text-white"><Icon size={28} aria-hidden /></span>
                                 <h2 className="mt-6 font-display text-2xl font-semibold">{title}</h2>
                                 <p className="mt-3 max-w-[52ch] text-lg text-ink/80">{text}</p>
@@ -70,8 +70,8 @@ export default function About() {
 
             {/* Strengths */}
             <section>
-                <div className="mx-auto max-w-6xl px-6 py-20">
-                    <h2 className="mb-10 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:text-4xl">What we're strong at</h2>
+                <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+                    <h2 className="mb-8 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:mb-10 sm:text-4xl">What we're strong at</h2>
                     <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr]">
                         <div className="grid gap-4 lg:sticky lg:top-32">
                             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
@@ -104,9 +104,9 @@ export default function About() {
 
             {/* Core values */}
             <section className="navy-bg grid-lines relative overflow-hidden text-white">
-                <div className="mx-auto max-w-6xl px-6 py-20">
-                    <h2 className="mb-10 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:text-4xl">Core values</h2>
-                    <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+                    <h2 className="mb-8 max-w-[24ch] font-display text-3xl font-semibold tracking-tight sm:mb-10 sm:text-4xl">Core values</h2>
+                    <ul className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                         {coreValues.map((v) => {
                             const Icon = valueIcons[v];
                             return (

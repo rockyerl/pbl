@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/ui";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display-next" });
@@ -15,8 +16,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={`${display.variable} ${body.variable}`}>
+        <html lang="en" data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
         <body className="font-sans antialiased">
+        <ScrollToTop />
         <Header />
         <main>{children}</main>
         <Footer />
